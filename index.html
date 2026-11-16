@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="ATLAS — Academic Learning Architect">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<title>ATLAS — Academic Learning Architect</title>
+<style>
+:root{--bg:#090e1b;--panel:#111a2d;--panel2:#162139;--line:#253451;--text:#eef3ff;--muted:#9ba9c4;--accent:#8b9cff;--accent2:#53d6c6;--gold:#e8bd73}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -15%,#1c2c52 0,transparent 42%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+button,input,select{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:auto;padding:18px 16px 100px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:25px}.brand{display:flex;align-items:center;gap:11px}.logo{width:43px;height:43px;border-radius:14px;background:linear-gradient(145deg,#9aa8ff,#4dd8c6);display:grid;place-items:center;color:#091323;font-weight:900;font-size:20px;box-shadow:0 8px 25px #647bff33}.brand h1{font-size:18px;letter-spacing:2px;margin:0}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:1.1px}.top-actions{display:flex;gap:8px}.ghost{border:1px solid var(--line);background:#10192b;color:var(--text);border-radius:12px;padding:9px 11px}.eyebrow{color:var(--accent2);font-size:11px;font-weight:700;letter-spacing:1.5px}.hero{padding:22px;border:1px solid #34476a;border-radius:23px;background:linear-gradient(135deg,#182743,#111a2d 65%);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:190px;height:190px;border:1px solid #8b9cff22;border-radius:50%;inset:auto -60px -110px auto;box-shadow:0 0 0 24px #8b9cff0a,0 0 0 48px #8b9cff08}.hero h2{font-size:27px;line-height:1.2;margin:8px 0}.hero p{color:#b5c2da;max-width:440px;margin:8px 0 17px}.primary{border:0;border-radius:13px;padding:12px 17px;background:linear-gradient(100deg,#9ba8ff,#5edbca);color:#091323;font-weight:800}.section-head{display:flex;align-items:center;justify-content:space-between;margin:25px 2px 12px}.section-head h3{font-size:16px;margin:0}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.card{border:1px solid var(--line);background:linear-gradient(145deg,#141f34,#101829);border-radius:17px;padding:15px}.stat{font-size:25px;font-weight:800;margin-top:7px}.card-label{font-size:12px;color:var(--muted)}.course{display:flex;align-items:center;gap:12px}.course-icon{width:42px;height:42px;flex:0 0 42px;border-radius:13px;background:#29365b;display:grid;place-items:center;font-size:20px}.course h4{margin:0;font-size:14px}.course p{margin:2px 0 0;color:var(--muted);font-size:12px}.progress{height:6px;background:#27344c;border-radius:10px;margin-top:13px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:10px}.course-foot{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:7px}.list{display:grid;gap:10px}.item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px;border:1px solid var(--line);border-radius:14px;background:#10192a}.item strong{font-size:13px}.item small{display:block;color:var(--muted);font-size:11px}.pill{font-size:10px;border:1px solid #3a5573;color:#9ce5d9;padding:4px 8px;border-radius:99px;white-space:nowrap}.nav{position:fixed;bottom:0;left:0;right:0;background:#0b1221ee;backdrop-filter:blur(18px);border-top:1px solid var(--line);padding:10px max(12px,calc((100vw - 720px)/2)) calc(10px + env(safe-area-inset-bottom));display:flex;justify-content:space-around;z-index:5}.nav button{border:0;background:none;color:var(--muted);font-size:11px;display:grid;gap:3px;justify-items:center;min-width:58px}.nav button.active{color:var(--accent2)}.nav span{font-size:19px}.page{display:none}.page.active{display:block}.field{display:grid;gap:6px;margin:14px 0}.field label{font-size:12px;color:var(--muted)}.field input,.field select{width:100%;background:#0b1424;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px;outline:none}.empty{padding:25px;text-align:center;border:1px dashed #354565;border-radius:16px;color:var(--muted)}.notice{font-size:11px;color:#aab7d0;margin-top:16px;padding:11px;border-radius:12px;background:#111b2e}.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#d9fff7;color:#071923;padding:10px 16px;border-radius:12px;font-weight:700;display:none;z-index:10}.modal{display:none;position:fixed;inset:0;background:#030712cc;z-index:8;align-items:flex-end;justify-content:center;padding:15px}.modal.open{display:flex}.sheet{width:min(100%,560px);background:#121d31;border:1px solid var(--line);border-radius:22px;padding:20px}.sheet h3{margin:0 0 8px}.actions{display:flex;gap:9px;margin-top:16px}.actions button{flex:1}.secondary{border:1px solid var(--line);background:#1a2740;color:var(--text);border-radius:13px;padding:11px}
+@media(min-width:600px){.app{padding-top:28px}.hero{padding:30px}.hero h2{font-size:34px}.modal{align-items:center}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+ <div class="brand"><div class="logo">A</div><div><h1>ATLAS</h1><small>ACADEMIC LEARNING ARCHITECT</small></div></div>
+ <div class="top-actions"><button class="ghost" id="langBtn" aria-label="Change language">EN</button><button class="ghost" id="profileBtn">◉</button></div>
+</header>
+
+<main>
+<section class="page active" id="home">
+ <div class="hero"><div class="eyebrow" data-he="מערכת הלמידה האישית שלך" data-en="YOUR PERSONAL LEARNING SYSTEM">מערכת הלמידה האישית שלך</div><h2 data-he="לומדים לעומק.<br>חושבים באופן עצמאי." data-en="Learn deeply.<br>Think independently.">לומדים לעומק.<br>חושבים באופן עצמאי.</h2><p data-he="בנה מסלול אקדמי משלך, חקור רעיונות ובחן את ההבנה שלך — צעד אחר צעד." data-en="Build your own academic path, explore ideas, and test your understanding — one step at a time.">בנה מסלול אקדמי משלך, חקור רעיונות ובחן את ההבנה שלך — צעד אחר צעד.</p><button class="primary" id="newCourse" data-he="＋ יצירת קורס ראשון" data-en="＋ Create your first course">＋ יצירת קורס ראשון</button></div>
+ <div class="section-head"><h3 data-he="תמונת מצב" data-en="Your overview">תמונת מצב</h3><span class="muted" style="font-size:11px" data-he="ההתקדמות שלך" data-en="Your progress">ההתקדמות שלך</span></div>
+ <div class="grid">
+  <div class="card"><div class="card-label" data-he="קורסים פעילים" data-en="Active courses">קורסים פעילים</div><div class="stat" id="courseCount">0</div></div>
+  <div class="card"><div class="card-label" data-he="שיעורים שהושלמו" data-en="Lessons completed">שיעורים שהושלמו</div><div class="stat">0</div></div>
+ </div>
+ <div class="section-head"><h3 data-he="הקורסים שלי" data-en="My courses">הקורסים שלי</h3><button class="ghost" id="allCourses" data-he="הצג הכול" data-en="View all">הצג הכול</button></div>
+ <div class="list" id="homeCourses"><div class="empty" data-he="עדיין אין קורסים. צור קורס ראשון כדי להתחיל." data-en="No courses yet. Create your first course to begin.">עדיין אין קורסים. צור קורס ראשון כדי להתחיל.</div></div>
+ <div class="notice" data-he="גרסת אב־טיפוס: הנתונים נשמרים במכשיר הזה בלבד. חיבור למנוע AI, מחקר אקדמי וסנכרון בין מכשירים יתווספו בשלבים הבאים." data-en="Prototype: data is stored on this device only. AI, academic research, and cross-device sync will be added in later stages.">גרסת אב־טיפוס: הנתונים נשמרים במכשיר הזה בלבד. חיבור למנוע AI, מחקר אקדמי וסנכרון בין מכשירים יתווספו בשלבים הבאים.</div>
+</section>
+
+<section class="page" id="courses">
+ <div class="section-head"><h3 data-he="ספריית הקורסים" data-en="Course library">ספריית הקורסים</h3><button class="primary" id="newCourse2" data-he="＋ חדש" data-en="＋ New">＋ חדש</button></div>
+ <div class="list" id="courseList"><div class="empty" data-he="הקורסים שתיצור יופיעו כאן." data-en="Your courses will appear here.">הקורסים שתיצור יופיעו כאן.</div></div>
+</section>
+
+<section class="page" id="study">
+ <div class="section-head"><h3 data-he="מרחב הלמידה" data-en="Learning studio">מרחב הלמידה</h3></div>
+ <div class="card"><div class="eyebrow" data-he="השיעור הבא שלך" data-en="YOUR NEXT LESSON">השיעור הבא שלך</div><h2 style="font-size:21px" data-he="מתחילים מהשאלה הנכונה" data-en="Start with the right question">מתחילים מהשאלה הנכונה</h2><p class="muted" data-he="בחר קורס כדי ש-ATLAS יוכל לבנות עבורך מסלול לימוד מדורג." data-en="Choose a course so ATLAS can build a structured learning path for you.">בחר קורס כדי ש-ATLAS יוכל לבנות עבורך מסלול לימוד מדורג.</p><button class="primary" id="studyChoose" data-he="בחירת קורס" data-en="Choose a course">בחירת קורס</button></div>
+ <div class="section-head"><h3 data-he="כלי הלמידה" data-en="Learning tools">כלי הלמידה</h3></div>
+ <div class="list">
+  <div class="item"><div><strong data-he="Active Recall" data-en="Active Recall">Active Recall</strong><small data-he="שליפה אקטיבית מהזיכרון" data-en="Retrieve knowledge from memory">שליפה אקטיבית מהזיכרון</small></div><span class="pill">01</span></div>
+  <div class="item"><div><strong data-he="Socratic Dialogue" data-en="Socratic Dialogue">Socratic Dialogue</strong><small data-he="למידה באמצעות שאלות ודיון" data-en="Learn through questions and dialogue">למידה באמצעות שאלות ודיון</small></div><span class="pill">02</span></div>
+  <div class="item"><div><strong data-he="Feynman Technique" data-en="Feynman Technique">Feynman Technique</strong><small data-he="הסבר רעיונות במילים שלך" data-en="Explain concepts in your own words">הסבר רעיונות במילים שלך</small></div><span class="pill">03</span></div>
+ </div>
+</section>
+
+<section class="page" id="library">
+ <div class="section-head"><h3 data-he="הספרייה האקדמית" data-en="Academic library">הספרייה האקדמית</h3></div>
+ <div class="empty"><div style="font-size:30px;margin-bottom:8px">⌕</div><strong data-he="מרכז המחקר של ATLAS" data-en="ATLAS research hub">מרכז המחקר של ATLAS</strong><p data-he="בשלב הבא נוסיף חיפוש מאמרים, ניהול מקורות, הערות וציטוטים." data-en="Next, we'll add paper search, source management, notes, and citations.">בשלב הבא נוסיף חיפוש מאמרים, ניהול מקורות, הערות וציטוטים.</p></div>
+</section>
+
+<section class="page" id="profile">
+ <div class="section-head"><h3 data-he="הפרופיל שלי" data-en="My profile">הפרופיל שלי</h3></div>
+ <div class="card"><div class="eyebrow">ATLAS LEARNER PROFILE</div><h2 data-he="המסע האקדמי שלך" data-en="Your academic journey">המסע האקדמי שלך</h2><p class="muted" data-he="כאן יופיעו בהמשך תחומי העניין, רמת הידע, היעדים וההישגים שלך." data-en="Your interests, knowledge level, goals, and achievements will appear here.">כאן יופיעו בהמשך תחומי העניין, רמת הידע, היעדים וההישגים שלך.</p></div>
+ <div class="section-head"><h3 data-he="הגדרות" data-en="Settings">הגדרות</h3></div>
+ <div class="item"><div><strong data-he="שפה" data-en="Language">שפה</strong><small data-he="עברית / English" data-en="עברית / English">עברית / English</small></div><button class="ghost" id="langBtn2">EN / עב</button></div>
+</section>
+</main>
+</div>
+<nav class="nav">
+ <button class="active" data-page="home"><span>⌂</span><b data-he="בית" data-en="Home">בית</b></button>
+ <button data-page="courses"><span>▤</span><b data-he="קורסים" data-en="Courses">קורסים</b></button>
+ <button data-page="study"><span>✧</span><b data-he="ללמוד" data-en="Study">ללמוד</b></button>
+ <button data-page="library"><span>▧</span><b data-he="ספרייה" data-en="Library">ספרייה</b></button>
+ <button data-page="profile"><span>◉</span><b data-he="פרופיל" data-en="Profile">פרופיל</b></button>
+</nav>
+<div class="modal" id="modal"><div class="sheet">
+ <h3 data-he="יצירת קורס חדש" data-en="Create a new course">יצירת קורס חדש</h3>
+ <p class="muted" style="font-size:12px" data-he="התחל מתחום שמסקרן אותך. ATLAS יעזור לבנות ממנו מסלול לימוד." data-en="Start with a subject that interests you. ATLAS will help turn it into a learning path.">התחל מתחום שמסקרן אותך. ATLAS יעזור לבנות ממנו מסלול לימוד.</p>
+ <div class="field"><label data-he="שם הקורס / התחום" data-en="Course name / subject">שם הקורס / התחום</label><input id="courseName" placeholder="למשל: פסיכולוגיה קוגניטיבית / Cognitive Psychology"></div>
+ <div class="field"><label data-he="רמת התחלה" data-en="Starting level">רמת התחלה</label><select id="courseLevel"><option value="beginner" data-he="מתחיל" data-en="Beginner">מתחיל</option><option value="intermediate" data-he="בינוני" data-en="Intermediate">בינוני</option><option value="advanced" data-he="מתקדם" data-en="Advanced">מתקדם</option></select></div>
+ <div class="actions"><button class="secondary" id="cancel" data-he="ביטול" data-en="Cancel">ביטול</button><button class="primary" id="create" data-he="יצירת קורס" data-en="Create course">יצירת קורס</button></div>
+</div></div>
+<div class="toast" id="toast"></div>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+let lang=localStorage.getItem('atlas_lang')||'he';
+let courses=JSON.parse(localStorage.getItem('atlas_courses')||'[]');
+function setLang(){document.documentElement.lang=lang;document.documentElement.dir=lang==='he'?'rtl':'ltr';$$('[data-he]').forEach(el=>{const v=el.getAttribute('data-'+lang);if(v!==null)el.innerHTML=v});$('#langBtn').textContent=lang==='he'?'EN':'עב';$('#langBtn2').textContent='EN / עב';localStorage.setItem('atlas_lang',lang)}
+function toast(msg){$('#toast').textContent=msg;$('#toast').style.display='block';setTimeout(()=>$('#toast').style.display='none',2200)}
+function render(){ $('#courseCount').textContent=courses.length;let empty=lang==='he'?'עדיין אין קורסים. צור קורס ראשון כדי להתחיל.':'No courses yet. Create your first course to begin.';let cards=courses.map((c,i)=>`<div class="card"><div class="course"><div class="course-icon">✧</div><div><h4>${escapeHtml(c.name)}</h4><p>${levelName(c.level)}</p></div></div><div class="progress"><span style="width:0%"></span></div><div class="course-foot"><span>${lang==='he'?'עדיין לא התחלת':'Not started yet'}</span><span>0%</span></div></div>`).join('');$('#homeCourses').innerHTML=cards||`<div class="empty">${empty}</div>`;$('#courseList').innerHTML=cards||`<div class="empty">${lang==='he'?'הקורסים שתיצור יופיעו כאן.':'Your courses will appear here.'}</div>`}
+function levelName(v){return ({beginner:lang==='he'?'מתחיל':'Beginner',intermediate:lang==='he'?'בינוני':'Intermediate',advanced:lang==='he'?'מתקדם':'Advanced'})[v]}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function openModal(){$('#modal').classList.add('open');$('#courseName').focus()}function closeModal(){$('#modal').classList.remove('open')}
+function navigate(id){$$('.page').forEach(p=>p.classList.toggle('active',p.id===id));$$('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo(0,0)}
+$$('.nav button').forEach(b=>b.addEventListener('click',()=>navigate(b.dataset.page)));
+['#newCourse','#newCourse2'].forEach(s=>$(s).addEventListener('click',openModal));
+$('#cancel').onclick=closeModal;$('#create').onclick=()=>{let name=$('#courseName').value.trim();if(!name){toast(lang==='he'?'צריך לתת שם לקורס':'Please enter a course name');return}courses.unshift({name,level:$('#courseLevel').value,created:Date.now()});localStorage.setItem('atlas_courses',JSON.stringify(courses));$('#courseName').value='';closeModal();render();navigate('courses');toast(lang==='he'?'הקורס נוצר בהצלחה':'Course created')};
+$('#langBtn').onclick=$('#langBtn2').onclick=()=>{lang=lang==='he'?'en':'he';setLang();render()};
+$('#profileBtn').onclick=()=>navigate('profile');$('#allCourses').onclick=()=>navigate('courses');$('#studyChoose').onclick=()=>navigate('courses');
+$('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
+setLang();render();
+</script>
+<script>
+if ("serviceWorker" in navigator && location.protocol !== "file:") {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(err => console.log("Offline support unavailable:", err));
+  });
+}
+</script>
+</body>
+</html>

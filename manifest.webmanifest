@@ -1,0 +1,22 @@
+{
+  "id": "./",
+  "name": "ATLAS — Academic Learning Architect",
+  "short_name": "ATLAS",
+  "description": "Your personal academic learning architect.",
+  "lang": "he",
+  "dir": "auto",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#090e1b",
+  "theme_color": "#0b1020",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
