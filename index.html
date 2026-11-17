@@ -113,7 +113,58 @@ $('#cancel').onclick=closeModal;$('#create').onclick=()=>{let name=$('#courseNam
 $('#langBtn').onclick=$('#langBtn2').onclick=()=>{lang=lang==='he'?'en':'he';setLang();render()};
 $('#profileBtn').onclick=()=>navigate('profile');$('#allCourses').onclick=()=>navigate('courses');$('#studyChoose').onclick=()=>navigate('courses');
 $('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
-setLang();render();
+setLang();render();const ATLAS_API_URL = "https://atlas-core.qynnytmr62.workers.dev";
+
+function addAtlasMessage(role, text) {
+  const item = document.createElement("div");
+  item.className = "item";
+  const content = document.createElement("div");
+  const title = document.createElement("strong");
+  title.textContent = role;
+  const message = document.createElement("small");
+  message.style.whiteSpace = "pre-wrap";
+  message.textContent = text;
+  content.append(title, message);
+  item.append(content);
+  $("#atlasMessages").append(item);
+}
+
+async function sendAtlasMessage() {
+  const input = $("#atlasInput");
+  const button = $("#atlasSend");
+  const status = $("#atlasStatus");
+  const message = input.value.trim();
+
+  if (!message) return;
+
+  addAtlasMessage("You", message);
+  input.value = "";
+  button.disabled = true;
+  status.textContent = "ATLAS חושב...";
+
+  try {
+    const response = await fetch(ATLAS_API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message })
+    });
+
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || "Request failed");
+
+    addAtlasMessage("ATLAS", data.answer || "לא התקבלה תשובה");
+    status.textContent = "";
+  } catch (error) {
+    status.textContent = "שגיאה: " + error.message;
+  } finally {
+    button.disabled = false;
+  }
+}
+
+$("#atlasSend").addEventListener("click", sendAtlasMessage);
+$("#atlasInput").addEventListener("keydown", e => {
+  if (e.key === "Enter") sendAtlasMessage();
+});
 </script>
 <script>
 if ("serviceWorker" in navigator && location.protocol !== "file:") {
