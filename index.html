@@ -49,6 +49,23 @@ button,input,select{font:inherit}button{cursor:pointer}.app{max-width:760px;marg
   <div class="item"><div><strong data-he="Socratic Dialogue" data-en="Socratic Dialogue">Socratic Dialogue</strong><small data-he="למידה באמצעות שאלות ודיון" data-en="Learn through questions and dialogue">למידה באמצעות שאלות ודיון</small></div><span class="pill">02</span></div>
   <div class="item"><div><strong data-he="Feynman Technique" data-en="Feynman Technique">Feynman Technique</strong><small data-he="הסבר רעיונות במילים שלך" data-en="Explain concepts in your own words">הסבר רעיונות במילים שלך</small></div><span class="pill">03</span></div>
  </div>
+ <div class="section-head">
+  <h3 data-he="שיחה עם ATLAS" data-en="Chat with ATLAS">שיחה עם ATLAS</h3>
+</div>
+<div class="card">
+  <div id="atlasMessages" class="list">
+    <div class="item">
+      <div><strong>ATLAS</strong>
+      <small>שלום! על מה נלמד היום?</small></div>
+    </div>
+  </div>
+  <div class="field">
+    <label for="atlasInput">השאלה שלך</label>
+    <input id="atlasInput" placeholder="כתוב שאלה או נושא ללמידה...">
+  </div>
+  <button class="primary" id="atlasSend" style="width:100%">שליחה ל-ATLAS</button>
+  <p id="atlasStatus" class="muted"></p>
+</div>
 </section>
 
 <section class="page" id="library">
