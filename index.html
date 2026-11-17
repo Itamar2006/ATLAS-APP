@@ -146,7 +146,7 @@ async function sendAtlasMessage() {
     const response = await fetch(ATLAS_API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message })
+      body: JSON.stringify({ message, userId: localStorage.getItem("atlas_uid") || (localStorage.setItem("atlas_uid", crypto.randomUUID()), localStorage.getItem("atlas_uid")) })
     });
 
     const data = await response.json();
